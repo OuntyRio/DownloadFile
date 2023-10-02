@@ -43,10 +43,9 @@ function divideFile(url, filename, threads) {
       for (let i = 0; i < threads; i++) {
         const start = i * chunkSize;
         const end = i === threads - 1 ? contentLength : (i + 1) * chunkSize;
-        const chunkFile = `${filename}-${i + 1}`;
 
         chunksToDownload.push(() => {
-          downloadChunk(url, start, end, chunkFile);
+          downloadChunk(url, start, end, filename);
         });
       }
 
