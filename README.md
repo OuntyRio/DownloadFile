@@ -4,6 +4,7 @@
 
 Запуск: 
 npm i
+
 node index.js <url> <fileName> <thread number> 
 
 Пример:
